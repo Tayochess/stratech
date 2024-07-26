@@ -51,6 +51,16 @@ Make sure you have the following installed:
     ```plaintext
     DATABASE_URL=postgres://username:password@localhost:5432/database_name
     JWT_SECRET=your_jwt_secret
+    DB_USER=your_db_username
+    DB_NAME=your_db_name
+    DB_PASS=your_db_password
+    DB_HOST=your_db_host
+    ```
+
+4. Run migrations to create the database schema:
+
+    ```bash
+    npx sequelize-cli db:migrate
     ```
 
 ### Running the Application
@@ -62,39 +72,6 @@ Make sure you have the following installed:
     ```
 
     The application will be available at [http://localhost:3000](http://localhost:3000).
-
-### Folder Structure
-
-my-app/
-├── components/
-│ ├── TransactionsList.js
-│ ├── WalletManager.js
-├── models/
-│ ├── index.js
-│ ├── transaction.js
-│ ├── user.js
-│ ├── wallet.js
-├── pages/
-│ ├── api/
-│ │ ├── auth/
-│ │ │ ├── [...nextauth].js
-│ │ ├── transactions.js
-│ │ ├── wallets.js
-│ ├── index.js
-│ ├── login.js
-│ ├── register.js
-│ ├── dashboard.js
-│ ├── wallets.js
-├── public/
-├── styles/
-├── utils/
-│ ├── db.js
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
-├── middleware.js
-
 
 ### Usage
 
