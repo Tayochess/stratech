@@ -67,7 +67,7 @@ const WalletManager = ({ wallet, session, onClose, onUpdate }) => {
     };
 
     const debouncedSearch = useCallback(
-        debounce((email) => handleSearchUsers(email), 500),
+        debounce((email) => handleSearchUsers(email), 200),
         []
     );
 
@@ -175,6 +175,7 @@ const WalletManager = ({ wallet, session, onClose, onUpdate }) => {
                             placeholder="Recipient Email"
                         />
                         <ul className='list'>
+                            {searchResults.length === 0 && <div className='notification'>No wallets found</div>}
                             {searchResults.map((user) => (
                                 <li className='list__item user' key={user.id}>
                                     <span>{user.email}</span>

@@ -147,6 +147,7 @@ body {
     bottom: 0;
     right: 0;
     padding: 40px 20px;
+    overflow-y: scroll;
 }
 
 .modal__header {
